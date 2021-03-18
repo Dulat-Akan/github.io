@@ -16,9 +16,8 @@ function addBox(event){
           findElement.innerHTML += newElem;
         }
     }
-
-
 }
+
 function addContainer(event){
   var element = event.target.parentElement.parentNode.parentElement.parentNode;
 
@@ -56,7 +55,6 @@ function setColor(element){
   selectedElement.style.backgroundColor = colorArray[getRandomInt(3)];
 
 }
-
 //long press event
 
 function PressUpEvent(){
@@ -99,5 +97,4 @@ function PressUpEvent(){
 }
 
 PressUpEvent();
-
 //long press event

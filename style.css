@@ -15,10 +15,10 @@
   position: relative;
   margin-left: 7%;
   margin-top:6%;
-    width:60%;
-    height: 60%;
-    float: left;
-    overflow: hidden;
+  width:60%;
+  height: 60%;
+  float: left;
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -55,6 +55,8 @@
 .buttonText{
   margin-top:12%;
   text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .addBox{
@@ -74,15 +76,17 @@
   background-color: orange;
   float: left;
   border-radius: 10px;
+  font-size: 14px;
 }
 
 .addBoxInTwo{
   margin-left:2%;
-  width:48%;
-  height: 100%;
+  width:46%;
+  height: 92%;
+  font-size: 14px;
   background-color: white;
   float: left;
-  border:1% solid black;
+  border:1px solid black;
   border-radius: 10px;
 }
 
