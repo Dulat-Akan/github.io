@@ -1,73 +1,58 @@
 .Rectangle{
-
-
-  margin-top:10%;
-  margin-left:20%;
   background-color: white;
-  width:70%;
-  height: 30vh;
   border:1px solid black;
   border-radius: 5px;
-
+  padding: 5px 5px 5px 5px;
+  float: left;
+  margin:5px;
 }
 
 .CommonRectangle{
-  position: relative;
-  margin-left: 7%;
-  margin-top:6%;
-  width:60%;
-  height: 60%;
   float: left;
-  overflow: hidden;
   z-index: 1;
 }
 
 .insideRectangleOne{
-  width:47%;
-  height: 100%;
+  margin:5px;
+  width:50px;
+  height: 50px;
   float: left;
   background-color: #f8e8d1;
-  position: relative;
   z-index: 1;
 }
 .insideRectangleTwo{
-  margin-left:5%;
-  width:47%;
-  height: 100%;
+  margin:5px;
+  width:50px;
+  height: 50px;
   float: left;
   background-color: #dbe6d6;
-  position: relative;
   z-index: 1;
 }
 .insideRectangleThree{
-  position: relative;
-  margin-left:4%;
-  margin-top:10%;
-  width:20%;
-  height: 30%;
+  margin:5px;
+  width:70px;
+  height: 30px;
   float: left;
   background-color: white;
   border-radius: 10px;
   border:2px solid black;
+  padding: 5px;
   z-index: 10;
 }
 
 .buttonText{
-  margin-top:12%;
+  margin-top:5px;
   text-align: center;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
 .addBox{
-  position: absolute;
   display: none;
-  width:180%;
-  height: 80%;
-  /* background-color: blue; */
-  position: relative;
-  top:-130%;
-  left:-30%;
+  width: 150px;
+  height: 30px;
+  margin-top: -50px;
+  margin-left: -35px;
 }
 
 .addBoxIn{
@@ -91,11 +76,8 @@
 }
 
 .insertNewBlock{
-  position: absolute;
   top:0px;
   left:0px;
   /* background-color: yellow; */
-  width:100%;
-  height: 100%;
   z-index: 10;
 }

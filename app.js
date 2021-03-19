@@ -1,9 +1,37 @@
-function hoverEvent(){
-  document.querySelector(".addBox").style.display = "block";
+function hoverEvent(event){
+
+
+
+  var selectElement = event.target.childNodes;
+
+  for (var i = 0; i < selectElement.length; i++) {
+
+    if(selectElement[i].className == "addBox"){
+      selectElement[i].style.display = "block";
+    }
+
+  }
+
+}
+function hoverEventChild(event){
+
+  var selectElement = event.target;
+  var nextSibling = selectElement.nextSibling;
+  while(nextSibling && nextSibling.nodeType != 1) {
+      nextSibling = nextSibling.nextSibling;
+      nextSibling.style.display = "block";
+  }
+
 }
 
-function unHoverEvent(){
-  document.querySelector(".addBox").style.display = "none";
+function unHoverEvent(event){
+
+  var select = document.querySelectorAll(".addBox");
+  for (i = 0; i < select.length; i++) {
+    select[i].style.display = "none";
+  }
+
+
 }
 
 function addBox(event){
@@ -16,33 +44,39 @@ function addBox(event){
           findElement.innerHTML += newElem;
         }
     }
-}
 
-function addContainer(event){
-  var element = event.target.parentElement.parentNode.parentElement.parentNode;
-
-  for (var i = 0; i < element.childNodes.length; i++) {
-      if (element.childNodes[i].className == "CommonRectangle") {
-        var findElement = element.childNodes[i];
-        var newElem = '<div class="insideRectangleTwo"></div>';
-        findElement.innerHTML += newElem;
-      }
-  }
-}
-
-function addRectangle(){
-    var El = document.querySelector(".insertNewBlock");
-    while(El.firstChild){
-        El.removeChild(El.firstChild);
+    var select = document.querySelectorAll(".addBox");
+    for (i = 0; i < select.length; i++) {
+      select[i].style.display = "none";
     }
-    var CopyBlock = document.querySelector(".Rectangle");
-    var clonedElement = CopyBlock.cloneNode(true);
-    clonedElement.style.width = "92%";
-    clonedElement.style.height = "92%";
-    clonedElement.style.marginTop = "0px";
-    clonedElement.style.marginLeft = "0px";
-    document.querySelector(".insertNewBlock").appendChild(clonedElement);
 }
+
+
+
+function addRectangle(event){
+
+    var CopyBlock = event.target.parentElement.parentNode.parentElement;
+    var clonedElement = CopyBlock.cloneNode(true);
+    var insertBlock = '<div class="Rectangle"> <div class="CommonRectangle"> <!-- <div class="insideRectangleOne"></div> <div class="insideRectangleTwo"></div> --> </div> <div class="insideRectangleThree" onmouseover="hoverEvent(event)" > <div class="buttonText" onmouseover="hoverEventChild(event)" > Add </div> <div class="addBox"> <div class="addBoxIn LongPress" onmouseup="PressUpEvent()" onclick="addBox(event)"> <div class="buttonText"> Box </div> </div> <div class="addBoxInTwo LongPress" onclick="addRectangle(event)"> <div class="buttonText"> Container </div> </div> </div> </div> </div>';
+
+    var insideCommonRectangle = event.target.parentElement.parentNode.parentElement.parentNode.firstElementChild;
+    insideCommonRectangle.innerHTML += insertBlock;
+
+    var select = document.querySelectorAll(".addBox");
+    for (i = 0; i < select.length; i++) {
+      select[i].style.display = "none";
+    }
+
+}
+
+// function addRectangle(event){
+//
+//     var CopyBlock = event.target.parentElement.parentNode.parentElement;
+//     //console.log(CopyBlock.className);
+//     var clonedElement = CopyBlock.cloneNode(true);
+//     var insideCommonRectangle = event.target.parentElement.parentNode.parentElement.parentNode.firstElementChild;
+//     insideCommonRectangle.appendChild(clonedElement);
+// }
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));

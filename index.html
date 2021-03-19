@@ -4,25 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./style.css?v=3">
+  <link rel="stylesheet" href="./style.css?v=15">
   <title>Document</title>
 </head>
-<body>
+<body  >
 
 
-
-
-
-  <div class="Rectangle">
+  <div class="Rectangle" >
 
     <div class="CommonRectangle">
       <!-- <div class="insideRectangleOne"></div>
       <div class="insideRectangleTwo"></div> -->
-      <div class="insertNewBlock"></div>
     </div>
 
-    <div class="insideRectangleThree" onmouseover="hoverEvent()"   onmouseout="unHoverEvent()">
-      <div class="buttonText" onclick="addRectangle()">
+    <div class="insideRectangleThree" onmouseover="hoverEvent(event)" >
+      <div class="buttonText" onmouseover="hoverEventChild(event)" >
           Add
       </div>
       <div class="addBox">
@@ -31,7 +27,7 @@
               Box
             </div>
           </div>
-          <div class="addBoxInTwo LongPress" onclick="addContainer(event)">
+          <div class="addBoxInTwo LongPress" onclick="addRectangle(event)">
             <div class="buttonText">
               Container
             </div>
@@ -41,7 +37,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=1"></script>
+  <script src="app.js?v=14"></script>
 
 
 
